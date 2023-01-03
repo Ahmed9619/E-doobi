@@ -17,9 +17,11 @@ public class MyOrdersAdapter extends RecyclerView.Adapter<MyOrdersAdapter.MyView
 
     private OnOrderClickedListener mListener;
     private ArrayList<MyOrder> mOrderArrayList;
-
+    private ClothTypesArray mClothTypesArray;
 
     public MyOrdersAdapter() {
+
+        mClothTypesArray = new ClothTypesArray();
         mOrderArrayList = new ArrayList<>();
     }
 
@@ -48,10 +50,12 @@ public class MyOrdersAdapter extends RecyclerView.Adapter<MyOrdersAdapter.MyView
         holder.tvClothType.setText(orderObj.getClothType());
         String count = orderObj.getClothQuantity() + "";
         holder.tvClothCount.setText(count);
-
-        holder.itemView.setOnClickListener(v->{
+        holder.itemView.setOnClickListener(v -> {
             mListener.onOrderClicked(orderObj);
         });
+
+        int icon = mClothTypesArray.getClothTypesMap().get(orderObj.getClothType());
+        holder.ivClothIcon.setImageResource(icon);
 
     }
 
@@ -61,8 +65,7 @@ public class MyOrdersAdapter extends RecyclerView.Adapter<MyOrdersAdapter.MyView
     }
 
 
-
-    public void setOnOrderClickedListener(OnOrderClickedListener listener){
+    public void setOnOrderClickedListener(OnOrderClickedListener listener) {
         mListener = listener;
     }
 

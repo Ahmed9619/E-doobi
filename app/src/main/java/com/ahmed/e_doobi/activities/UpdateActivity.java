@@ -1,7 +1,5 @@
 package com.ahmed.e_doobi.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -12,7 +10,10 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.ahmed.e_doobi.R;
+import com.ahmed.e_doobi.models.ClothTypesArray;
 import com.ahmed.e_doobi.models.MyFirebaseKeys;
 import com.ahmed.e_doobi.models.MyOrder;
 import com.google.firebase.auth.FirebaseAuth;
@@ -20,7 +21,6 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 
 public class UpdateActivity extends AppCompatActivity {
@@ -72,16 +72,12 @@ public class UpdateActivity extends AppCompatActivity {
 
     }
 
+
     private void populateClothTypesArray() {
-        mClothTypesArrayList = new ArrayList<>();
-        mClothTypesArrayList.add("Omani Mussar");
-        mClothTypesArrayList.add("Omani Dishdasha");
-        mClothTypesArrayList.add("T-Shirt");
-        mClothTypesArrayList.add("Jacket");
-        mClothTypesArrayList.add("Suit");
-        mClothTypesArrayList.add("Trousers");
-        mClothTypesArrayList.add("Bed Sheet");
+        ClothTypesArray clothTypesArray = new ClothTypesArray();
+        mClothTypesArrayList = clothTypesArray.getClothTypesArrayList();
     }
+
 
     private AdapterView.OnItemSelectedListener onItemSelectedListener() {
         AdapterView.OnItemSelectedListener callback = new AdapterView.OnItemSelectedListener() {

@@ -13,6 +13,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.ahmed.e_doobi.R;
+import com.ahmed.e_doobi.models.ClothTypesArray;
 import com.ahmed.e_doobi.models.MyFirebaseKeys;
 import com.ahmed.e_doobi.models.MyOrder;
 import com.google.firebase.auth.FirebaseAuth;
@@ -64,15 +65,10 @@ public class AddActivity extends AppCompatActivity {
     }
 
     private void populateClothTypesArray() {
-        mClothTypesArrayList = new ArrayList<>();
-        mClothTypesArrayList.add("Omani Mussar");
-        mClothTypesArrayList.add("Omani Dishdasha");
-        mClothTypesArrayList.add("T-Shirt");
-        mClothTypesArrayList.add("Jacket");
-        mClothTypesArrayList.add("Suit");
-        mClothTypesArrayList.add("Trousers");
-        mClothTypesArrayList.add("Bed Sheet");
+        ClothTypesArray clothTypesArray = new ClothTypesArray();
+        mClothTypesArrayList = clothTypesArray.getClothTypesArrayList();
     }
+
 
     private AdapterView.OnItemSelectedListener onItemSelectedListener() {
         AdapterView.OnItemSelectedListener callback = new AdapterView.OnItemSelectedListener() {

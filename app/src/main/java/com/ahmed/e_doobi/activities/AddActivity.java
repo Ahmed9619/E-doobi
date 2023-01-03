@@ -52,7 +52,7 @@ public class AddActivity extends AppCompatActivity {
 
 
         spClothType.setOnItemSelectedListener(onItemSelectedListener());
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, mClothTypesArrayList);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.list_item_spinner, mClothTypesArrayList);
         spClothType.setAdapter(adapter);
 
         Button btnAddNewOrder = findViewById(R.id.btnAddNewOrder);
@@ -127,7 +127,7 @@ public class AddActivity extends AppCompatActivity {
 
             } else {
                 // If sign in fails, display a message to the user.
-                Log.w(TAG_ORDER, "createUserWithEmail:failure", task.getException());
+                Log.w(TAG_ORDER, "Order Creation:failure", task.getException());
                 Toast.makeText(AddActivity.this, "Authentication failed.",
                         Toast.LENGTH_SHORT).show();
 

@@ -1,6 +1,8 @@
 package com.ahmed.e_doobi.models;
 
-public class MyOrder {
+import java.io.Serializable;
+
+public class MyOrder implements Serializable {
     private String id;
     private String clothType;
     private String clothQuantity;

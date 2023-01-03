@@ -116,9 +116,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(AddOrderIntent);
     }
 
-
     private void openActivityUpdateOrder(MyOrder orderObj) {
-        Intent AddOrderIntent = new Intent(MainActivity.this, UpdateActivity.class);
-        startActivity(AddOrderIntent);
+        Intent updateOrderIntent = new Intent(MainActivity.this, UpdateActivity.class);
+        updateOrderIntent.putExtra("orderObj", orderObj);
+        startActivity(updateOrderIntent);
     }
 }

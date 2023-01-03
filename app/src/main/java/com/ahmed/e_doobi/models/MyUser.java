@@ -3,9 +3,15 @@ package com.ahmed.e_doobi.models;
 public class MyUser {
     private String id;
     private String fullName;
-    private String phone;
-    private String password;
+    private String email;
 
+    public  MyUser(){}
+
+    public MyUser(String id, String fullName, String email) {
+        this.id = id;
+        this.fullName = fullName;
+        this.email = email;
+    }
 
     public String getId() {
         return id;
@@ -23,19 +29,14 @@ public class MyUser {
         this.fullName = fullName;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getEmail() {
+        return email;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getPassword() {
-        return password;
-    }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+
 }

@@ -24,16 +24,6 @@ public class RegisterActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseUser mCurrentUser;
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-
-        mCurrentUser = mAuth.getCurrentUser();
-//        if(currentUser != null){
-//            reload();
-//        }
-    }
 
     private EditText etFullName;
     private EditText etEmail;
@@ -51,6 +41,8 @@ public class RegisterActivity extends AppCompatActivity {
 
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
+        mCurrentUser = mAuth.getCurrentUser();
+
 
         etFullName = findViewById(R.id.etFullName);
         etEmail = findViewById(R.id.etEmail);

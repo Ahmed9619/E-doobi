@@ -24,16 +24,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText etEmail;
     private EditText etPassword;
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
 
-        mCurrentUser = mAuth.getCurrentUser();
-//        if(currentUser != null){
-//            reload();
-//        }
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +33,7 @@ public class LoginActivity extends AppCompatActivity {
 
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
+        mCurrentUser = mAuth.getCurrentUser();
 
         etEmail = findViewById(R.id.etEmail);
         etPassword = findViewById(R.id.etPassword);

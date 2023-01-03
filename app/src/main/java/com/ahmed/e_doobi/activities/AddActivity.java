@@ -28,16 +28,6 @@ public class AddActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseUser mCurrentUser;
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-
-        mCurrentUser = mAuth.getCurrentUser();
-//        if(currentUser != null){
-//            reload();
-//        }
-    }
 
     private ArrayList<String> mClothTypesArrayList;
 
@@ -53,6 +43,7 @@ public class AddActivity extends AppCompatActivity {
 
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
+        mCurrentUser = mAuth.getCurrentUser();
 
         populateClothTypesArray();
 

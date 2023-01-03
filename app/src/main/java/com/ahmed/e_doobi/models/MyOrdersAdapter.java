@@ -16,8 +16,11 @@ import java.util.ArrayList;
 public class MyOrdersAdapter extends RecyclerView.Adapter<MyOrdersAdapter.MyViewHolder> {
 
     private OnOrderClickedListener mListener;
+    private OnOrderDeleteListener mDeleteListener;
+
     private ArrayList<MyOrder> mOrderArrayList;
     private ClothTypesArray mClothTypesArray;
+
 
     public MyOrdersAdapter() {
 
@@ -53,6 +56,9 @@ public class MyOrdersAdapter extends RecyclerView.Adapter<MyOrdersAdapter.MyView
         holder.itemView.setOnClickListener(v -> {
             mListener.onOrderClicked(orderObj);
         });
+        holder.ivDelete.setOnClickListener(view -> {
+            mDeleteListener.OnDeleteClicked(orderObj);
+        });
 
         int icon = mClothTypesArray.getClothTypesMap().get(orderObj.getClothType());
         holder.ivClothIcon.setImageResource(icon);
@@ -67,6 +73,10 @@ public class MyOrdersAdapter extends RecyclerView.Adapter<MyOrdersAdapter.MyView
 
     public void setOnOrderClickedListener(OnOrderClickedListener listener) {
         mListener = listener;
+    }
+
+    public void setOnOrderDeleteClickedListener(OnOrderDeleteListener listener) {
+        mDeleteListener = listener;
     }
 
     public void clear() {

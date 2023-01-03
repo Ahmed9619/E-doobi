@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.ahmed.e_doobi.R;
+import com.ahmed.e_doobi.fragments.DeleteOrderDialogFragment;
 import com.ahmed.e_doobi.models.MyFirebaseKeys;
 import com.ahmed.e_doobi.models.MyOrder;
 import com.ahmed.e_doobi.models.MyOrdersAdapter;
@@ -104,6 +105,9 @@ public class MainActivity extends AppCompatActivity {
         //set on itemClickListener
         mAdapter.setOnOrderClickedListener(this::openActivityUpdateOrder);
 
+        //set on itemDeleteClickListener
+        mAdapter.setOnOrderDeleteClickedListener(this::showDeleteDialog);
+
         // Set layout manager to position the items
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         rvOrders.setLayoutManager(layoutManager);
@@ -120,5 +124,10 @@ public class MainActivity extends AppCompatActivity {
         Intent updateOrderIntent = new Intent(MainActivity.this, UpdateActivity.class);
         updateOrderIntent.putExtra("orderObj", orderObj);
         startActivity(updateOrderIntent);
+    }
+
+    private void showDeleteDialog(MyOrder orderObj) {
+        DeleteOrderDialogFragment dialogFragment = DeleteOrderDialogFragment.newInstance(orderObj);
+        dialogFragment.show(getSupportFragmentManager(), DeleteOrderDialogFragment.TAG);
     }
 }

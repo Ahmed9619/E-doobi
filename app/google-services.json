@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1067683719613",
+    "project_id": "edoobi-329bb",
+    "storage_bucket": "edoobi-329bb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1067683719613:android:6085306576a0596b538ad4",
+        "android_client_info": {
+          "package_name": "com.ahmed.e_doobi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1067683719613-5vsho8pr2patp1cdb146j8fso7l535ke.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ahmed.e_doobi",
+            "certificate_hash": "816c6624391f74dac05f1049e83af1f2811f5ef5"
+          }
+        },
+        {
+          "client_id": "1067683719613-99jctsrnf92b8p6egmbvonbqb5j8np88.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBo1awDh4KEplbHjZlkicLEQg-UdQwR2c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1067683719613-99jctsrnf92b8p6egmbvonbqb5j8np88.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

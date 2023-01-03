@@ -46,7 +46,7 @@ public class MyOrdersAdapter extends RecyclerView.Adapter<MyOrdersAdapter.MyView
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         MyOrder orderObj = mOrderArrayList.get(position);
         holder.tvClothType.setText(orderObj.getClothType());
-        String count = orderObj.getClothCount() + "";
+        String count = orderObj.getClothQuantity() + "";
         holder.tvClothCount.setText(count);
 
         holder.itemView.setOnClickListener(v->{

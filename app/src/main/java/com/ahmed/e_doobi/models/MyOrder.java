@@ -3,8 +3,16 @@ package com.ahmed.e_doobi.models;
 public class MyOrder {
     private String id;
     private String clothType;
-    private String clothCount;
+    private String clothQuantity;
 
+    public MyOrder() {
+    }
+
+    public MyOrder(String id, String clothType, String clothQuantity) {
+        this.id = id;
+        this.clothType = clothType;
+        this.clothQuantity = clothQuantity;
+    }
 
     public String getId() {
         return id;
@@ -22,11 +30,11 @@ public class MyOrder {
         this.clothType = clothType;
     }
 
-    public String getClothCount() {
-        return clothCount;
+    public String getClothQuantity() {
+        return clothQuantity;
     }
 
-    public void setClothCount(String clothCount) {
-        this.clothCount = clothCount;
+    public void setClothQuantity(String clothQuantity) {
+        this.clothQuantity = clothQuantity;
     }
 }

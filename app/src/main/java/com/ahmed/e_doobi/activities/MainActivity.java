@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.ahmed.e_doobi.R;
 import com.ahmed.e_doobi.models.MyOrder;
 import com.ahmed.e_doobi.models.MyOrdersAdapter;
-import com.ahmed.e_doobi.models.OnOrderClickedListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -48,22 +47,22 @@ public class MainActivity extends AppCompatActivity {
 
         o = new MyOrder();
         o.setClothType("T-shirt");
-        o.setClothCount("5");
+        o.setClothQuantity("5");
         mData.add(o);
 
         o = new MyOrder();
         o.setClothType("Hoodie");
-        o.setClothCount("1");
+        o.setClothQuantity("1");
         mData.add(o);
 
         o = new MyOrder();
         o.setClothType("Dishdasha");
-        o.setClothCount("2");
+        o.setClothQuantity("2");
         mData.add(o);
 
         o = new MyOrder();
         o.setClothType("Koomah");
-        o.setClothCount("3");
+        o.setClothQuantity("3");
         mData.add(o);
 
     }

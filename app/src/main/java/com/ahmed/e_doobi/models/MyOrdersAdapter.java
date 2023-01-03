@@ -66,6 +66,12 @@ public class MyOrdersAdapter extends RecyclerView.Adapter<MyOrdersAdapter.MyView
         mListener = listener;
     }
 
+    public void clear() {
+        int size = mOrderArrayList.size();
+        mOrderArrayList.clear();
+        notifyItemRangeRemoved(0, size);
+    }
+
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         ImageView ivClothIcon;
         TextView tvClothType;

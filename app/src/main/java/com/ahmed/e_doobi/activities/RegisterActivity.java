@@ -20,14 +20,9 @@ import com.google.firebase.database.FirebaseDatabase;
 public class RegisterActivity extends AppCompatActivity {
 
     private static final String TAG_REGISTER = "TAG_REGISTER";
+
     private FirebaseAuth mAuth;
     private FirebaseUser mCurrentUser;
-
-    private EditText etFullName;
-    private EditText etEmail;
-    private EditText etPassword;
-    private EditText etConfirmPassword;
-
 
     @Override
     public void onStart() {
@@ -39,6 +34,14 @@ public class RegisterActivity extends AppCompatActivity {
 //            reload();
 //        }
     }
+
+    private EditText etFullName;
+    private EditText etEmail;
+    private EditText etPassword;
+    private EditText etConfirmPassword;
+
+
+
 
 
     @Override
